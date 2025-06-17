@@ -1,0 +1,45 @@
+
+
+#Name, Age, Height
+name = "Saad"
+age = 21
+height = 6.00
+
+#message output
+print("Hey there, my name is", name + "!")
+print("I’m", age, "years old and", height, "feet tall.")
+
+
+
+#Math
+num1 = 12
+num2 = 4
+
+# Addition
+print("The sum of", num1, "and", num2, "is", num1 + num2)  # 12 + 4 = 16
+
+# Subtraction
+print("The difference between", num1, "and", num2, "is", num1 - num2)  # 12 - 4 = 8
+
+# Multiplication
+print("If you multiply", num1, "by", num2, "you get", num1 * num2)  # 12 * 4 = 48
+
+# Division
+print("Dividing", num1, "by", num2, "gives", num1 / num2)  # 12 / 4 = 3.0
+
+# Bonus
+print("Math is fun!")
+
+
+
+
+#Conditional for Number Checking
+number = float(input("Enter a number and I’ll tell you its sign: "))
+
+# Conditional logic to check the nature of the number
+if number > 0:
+    print("This number is positive!")
+elif number < 0:
+    print("This number is negative!")
+else:
+    print("This is zero!")
