@@ -1,0 +1,36 @@
+# Countdown Timer
+print("Countdown Timer")
+start = int(input("Enter a starting number: "))
+
+while start > 0:
+    print(start)
+    start = start - 1
+
+print("Blast off!")
+
+print("---------------")
+
+
+
+
+# Multiplication Table
+print("Multiplication Table")
+num = int(input("Enter a number: "))
+
+for i in range(1, 11):
+    print(num, "x", i, "=", num * i)
+
+print("---------------")
+
+
+
+
+# Factorial Calculator
+print("Factorial Calculator")
+fact_num = int(input("Enter a number: "))
+factorial = 1
+
+for i in range(1, fact_num + 1):
+    factorial = factorial * i
+
+print("The factorial of", fact_num, "is", factorial)
