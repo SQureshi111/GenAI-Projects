@@ -1,0 +1,41 @@
+# Inventory Manager
+
+print("Welcome to the Inventory Manager!\n")
+
+# Step 1: Create the Inventory
+inventory = {
+    "apple": (10, 2.5),
+    "banana": (20, 1.2)
+}
+
+# Function to display the inventory
+def display_inventory():
+    print("Current Inventory:")
+    for item, (qty, price) in inventory.items():
+        print("Item:", item, ", Quantity:", qty, ", Price: $", price)
+    print()
+
+# Step 2: Add, Remove, and Update Items
+
+# Add a new item
+inventory["mango"] = (15, 3.0)
+print("Added a new item: mango")
+
+# Remove an item
+inventory.pop("banana")  # Remove banana from inventory
+print("Removed item: banana")
+
+# Update an item
+inventory["apple"] = (12, 2.8)
+print("Updated apple quantity and price.\n")
+
+# Step 3: Display the Inventory
+display_inventory()
+
+# Step 4: Bonus - Calculate Total Value
+total_value = 0
+for item in inventory:
+    quantity, price = inventory[item]
+    total_value += quantity * price
+
+print("Total value of inventory: $", total_value)
