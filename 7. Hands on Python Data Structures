@@ -1,0 +1,63 @@
+# Task 1 - Working with Lists
+print("=== Task 1: Working with Lists ===")
+
+# Step 1: Create a list of fruits
+fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+print("Original list:", fruits)
+
+# Step 2: Append a new fruit
+fruits.append('fig')
+print("After adding a fruit:", fruits)
+
+# Step 3: Remove a fruit
+fruits.remove('apple')  
+print("After removing a fruit:", fruits)
+
+# Step 4: Print the list in reverse
+reversed_fruits = fruits[::-1]
+print("Reversed list:", reversed_fruits)
+
+print("\n----------------------------\n")
+
+
+
+
+# Task 2 - Exploring Dictionaries
+print("=== Task 2: Exploring Dictionaries ===")
+
+# Step 1: Create a dictionary
+about_me = {
+    "name": "Saad",
+    "age": 21,
+    "city": "Austin"}
+
+# Step 2: Add favorite color
+about_me["favorite color"] = "Blue"
+
+# Step 3: Update city
+about_me["city"] = "New York"
+
+# Step 4: Print keys and values
+print("Keys:", ", ".join(about_me.keys()))
+print("Values:", ", ".join(str(value) for value in about_me.values()))
+
+print("\n----------------------------\n")
+
+
+
+
+# Task 3 - Using Tuples
+print("=== Task 3: Using Tuples ===")
+
+# Step 1: Create a tuple
+favorite_things = ('Interstellar', 'Where You Are', 'Harry Potter')
+print("Favorite things:", favorite_things)
+
+# Step 2: Try to change an element (this will show why tuples can't be changed)
+try:
+    favorite_things[0] = 'Spongebob Movie'
+except TypeError:
+    print("Oops! Tuples cannot be changed.")
+
+# Step 3: Print the length of the tuple
+print("Length of tuple:", len(favorite_things))
