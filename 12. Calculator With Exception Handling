@@ -1,0 +1,58 @@
+# Step 1: Display menu
+def show_menu():
+    print("\nWelcome to the Error-Free Calculator!")
+    print("Choose an operation:")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
+
+
+
+# Step 2: Get valid number input
+def get_number(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input! Please enter a valid number.")
+
+
+
+# Step 3: Handle Division with Exceptions
+def divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        print("Oops! Division by zero is not allowed.")
+        return None
+
+# Main program loop
+while True:
+    show_menu()
+    choice = input("> ")
+
+    if choice == "5":
+        print("Goodbye!")
+        break
+
+    if choice in ["1", "2", "3", "4"]:
+        num1 = get_number("Enter the first number: ")
+        num2 = get_number("Enter the second number: ")
+
+        if choice == "1":
+            result = num1 + num2
+            print("Result:", result)
+        elif choice == "2":
+            result = num1 - num2
+            print("Result:", result)
+        elif choice == "3":
+            result = num1 * num2
+            print("Result:", result)
+        elif choice == "4":
+            result = divide(num1, num2)
+            if result is not None:
+                print("Result:", result)
+    else:
+        print("Invalid choice. Please select 1, 2, 3, 4, or 5.")
