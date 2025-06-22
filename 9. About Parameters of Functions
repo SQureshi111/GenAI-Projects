@@ -1,0 +1,57 @@
+# Writing Functions
+
+def greet_user(name):
+    print("Hello,", name + "! Welcome aboard.")
+
+def add_numbers(a, b):
+    return a + b
+
+# Example usage:
+greet_user("Alice")
+sum_result = add_numbers(5, 10)
+print("The sum of 5 and 10 is", sum_result)
+
+print("\n----------------------------\n")
+
+# Using Default Parameters
+
+def describe_pet(pet_name, animal_type="dog"):
+    print("I have a", animal_type, "named", pet_name + ".")
+
+# Example usage:
+describe_pet("Buddy")               # Default is dog
+describe_pet("Whiskers", "cat")     # Specifying type
+
+print("\n----------------------------\n")
+
+# Functions with Variable Arguments
+
+def make_sandwich(*ingredients):
+    print("Making a sandwich with the following ingredients:")
+    for item in ingredients:
+        print("-", item)
+
+# Example usage:
+make_sandwich("Lettuce", "Tomato", "Cheese")
+
+print("\n----------------------------\n")
+
+# Understanding Recursion
+
+# Recursive function to find factorial
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+# Recursive function to find nth Fibonacci number
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+# Example usage:
+print("Factorial of 5 is", factorial(5))
+print("The 6th Fibonacci number is", fibonacci(6))
